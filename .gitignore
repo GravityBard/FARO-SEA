@@ -1,0 +1,14 @@
+# Simulink generated folders and caches
+slprj/
+*.slxc
+
+# MATLAB editor autosaves
+*.asv
+
+# Simulink recovery files
+*.slx.autosave
+*.slx.r*
+
+# Operating-system files
+Thumbs.db
+.DS_Store
