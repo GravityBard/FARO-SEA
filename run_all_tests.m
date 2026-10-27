@@ -1,7 +1,8 @@
 %% FARO — Tests on the current GNSS model
 % Integration scenarios use zero GNSS noise and no GNSS outage.
-% Navigation estimation remains active.
-% Execution stops if any assertion fails.
+% The MOB sensor-noise test explicitly enables noisy MOB observations.
+% Navigation and MOB estimation remain active.
+
 
 setup_FARO;
 
@@ -30,9 +31,14 @@ fprintf('\n=== GNSS model: MOB contact loss ===\n\n');
 
 run('test_contact_loss.m');
 
+fprintf('\n=== GNSS model: noisy MOB observations ===\n\n');
+
+run('test_mob_sensor_noise.m');
+
 fprintf('\n========================================\n');
 fprintf('All integrated tests passed.\n');
 fprintf('Simulation model tested: USV_SAR_GNSS.\n');
 fprintf('GNSS noise: zero. GNSS outages: disabled.\n');
 fprintf('Navigation estimator: active.\n');
+fprintf('MOB observations: ideal and fixed-seed noisy scenarios.\n');
 fprintf('========================================\n');

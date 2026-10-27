@@ -138,5 +138,8 @@ mob_contact_loss_end = 280;   % [s]
 %% MOB tracking — initial simulation settings
 mob_track_sample_time = 0.1; % Estimator update period [s]
 mob_track_alpha = 0.4;       % Position correction coefficient
-mob_track_beta = 0.08;       % Velocity correction coefficient
+mob_track_beta = 0.008;       % Velocity correction coefficient
 mob_track_max_age = 5;      % Maximum permitted prediction age [s]
+%% MOB position sensor
+mob_sensor_sample_time = mob_track_sample_time; % Periodo [s].
+mob_position_sigma = 0; % Desviación típica por eje [m].
