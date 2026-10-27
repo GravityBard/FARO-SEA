@@ -143,3 +143,9 @@ mob_track_max_age = 5;      % Maximum permitted prediction age [s]
 %% MOB position sensor
 mob_sensor_sample_time = mob_track_sample_time; % Periodo [s].
 mob_position_sigma = 0; % Desviación típica por eje [m].
+
+%% Optional MOB drift change
+% Controlled test disturbance; not a calibrated physical model.
+mob_drift_change_enabled = false;
+mob_drift_change_time = 240; % [s]
+mob_drift_factor_after = 1.2;

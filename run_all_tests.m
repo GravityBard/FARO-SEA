@@ -35,6 +35,14 @@ fprintf('\n=== GNSS model: noisy MOB observations ===\n\n');
 
 run('test_mob_sensor_noise.m');
 
+fprintf('\n=== GNSS model: return with expired MOB tracking ===\n\n');
+
+run('test_return_without_mob_track.m');
+
+fprintf('\n=== GNSS model: MOB drift change ===\n\n');
+
+run('test_mob_drift_change.m');
+
 fprintf('\n========================================\n');
 fprintf('All integrated tests passed.\n');
 fprintf('Simulation model tested: USV_SAR_GNSS.\n');
